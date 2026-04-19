@@ -1,0 +1,38 @@
+Andre Taylor Plumbing — Next.js 14 App Router Deployment Notes
+
+This project is already a Next.js 14 App Router application and is Vercel-ready.
+
+Runtime and framework
+- Framework: Next.js 14
+- Router: App Router (`app/` directory)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Rendering: Server-rendered pages by default in App Router
+
+Vercel compatibility checklist
+- `package.json` includes `build` and `start` scripts.
+- `next.config.ts` is standard and compatible with Vercel.
+- Route structure uses App Router conventions.
+- No custom server required.
+- No non-Vercel runtime dependencies are required.
+
+How to deploy on Vercel
+1) Push this repository to GitHub/GitLab/Bitbucket.
+2) In Vercel, click "Add New Project" and import the repository.
+3) Build settings (auto-detected):
+   - Framework Preset: Next.js
+   - Install Command: npm install
+   - Build Command: npm run build
+   - Output Directory: .next
+4) Deploy.
+
+Optional local commands
+- npm install
+- npm run dev
+- npm run build
+- npm start
+
+Notes
+- Canonical metadata and JSON-LD schema are already implemented.
+- Mobile sticky CTA bar and all requested routes are implemented.
+- No code behavior changes were made in this update.
